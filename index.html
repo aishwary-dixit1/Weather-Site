@@ -20,22 +20,23 @@
             </form>
             <div class="weather-fields" style="display: none;">
                 <div class="city-name">
-                    <h2>City: </h2>
                     <h2 id="city-name-output">--</h2>
                 </div>
                 <div class="city-temp">
                     <div class="max-temp">
-                        <h3>Temperature</h3>
-                        <h3 id="temp-output">--°C"</h3>
+                        <div class="temp-degree">
+                            <h1 id="temp-output">--"</h1>
+                            <h3 style="font-size: 2rem;">°C</h3>
+                        </div>
                     </div>
                     <div class="min-temp">
-                        <h3>Humidity</h3>
-                        <h3 id="humidity-output">--</h3>
+                        <img id="weather-icon" src="" alt="Weather Icon"/>
+                        <h3 id="humidity-output">.</h3>
                     </div>
                 </div>
                 <div class="city-weather">
-                    <h3>Weather: </h3>
-                    <h3 id="weather-output">--</h3>
+                    <h2 id="weather-output">--</h2>
+                    <h3 id="feels-like"></h3>
             </div>
         </div>
     </div>

@@ -85,7 +85,7 @@ button {
     color: white;
 }
 
-.city-name, .city-temp, .city-weather {
+.city-name, .city-temp  {
     margin: 0.5rem;
     padding: 0.5rem;
     display: flex;
@@ -95,8 +95,17 @@ button {
     gap: 1rem;
 }
 
-.min-temp, .max-temp {
-    margin: 0.5rem;
+.city-weather {
+    margin: 0.1rem;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.max-temp {
     padding: 0.5rem;
     display: flex;
     justify-content: center;
@@ -104,9 +113,41 @@ button {
     flex-direction: column;
     gap: 0.5rem;
 }
+.min-temp {
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 h1, h2, h3, #heading{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+#temp-output {
+    font-size: 4rem;
+}
+
+#weather-output {
+    font-size: 2rem;
+}
+
+#feels-like {
+    font-size: 1.25rem;
+}
+.temp-degree {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+}
+#weather-icon {
+    height: 15vh;
+    width: 30vmin;
+    object-fit: contain;
+    display: block;
+    margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -130,6 +171,18 @@ h1, h2, h3, #heading{
     #heading {
         font-size: 2rem;
     }
+
+    #temp-output {
+        font-size: 4rem;
+    }
+    
+    #weather-output {
+        font-size: 2rem;
+    }
+    
+    #feels-like {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -138,7 +191,7 @@ h1, h2, h3, #heading{
     }
 
     #heading {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .container {
@@ -149,5 +202,16 @@ h1, h2, h3, #heading{
     input, button {
         width: 100%;
         font-size: 0.8rem;
+    }
+    #temp-output {
+        font-size: 3.5rem;
+    }
+    
+    #weather-output {
+        font-size: 1.7rem;
+    }
+    
+    #feels-like {
+        font-size: 0.9rem;
     }
 }

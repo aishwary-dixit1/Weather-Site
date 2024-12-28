@@ -7,9 +7,11 @@ const searchButton = document.querySelector("#searchButton");
 const city = document.querySelector("#city-name-output");
 const Temp = document.querySelector("#temp-output");
 const humidity = document.querySelector("#humidity-output");
+const weatherIcon = document.querySelector("#weather-icon");
 const weather = document.querySelector("#weather-output");
 const backgroundVideo = document.querySelector("#background-video");
 const weatherFields = document.querySelector(".weather-fields");
+const feelsLike = document.querySelector("#feels-like");
 
 //Event Listener for search button
 searchButton.addEventListener("click", async (event) => {
@@ -43,9 +45,17 @@ searchButton.addEventListener("click", async (event) => {
 
         //Updating the HTML elements with the weather data
         city.innerText = cityName; //Setting the city name
-        Temp.innerText = (weather_data.main.temp - 273).toFixed(1) + " °C"; //Setting the maximum temperature
-        humidity.innerText = weather_data.main.humidity; //Setting the humidity
+        Temp.innerText = (weather_data.main.temp - 273).toFixed(1); //Setting the maximum temperature
+        humidity.innerText = weather_data.weather[0].description; //Setting the humidity
         weather.innerText = weather_data.weather[0].main; //Setting the weather description
+
+        console.log(weather_data);
+        feelsLike.innerText = "Feels like " + (weather_data.main.feels_like - 273).toFixed(1) + " °C";
+
+        const iconCode = weather_data.weather[0].icon;
+        const iconURL = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+        weatherIcon.src = iconURL;
 
         //Setting the background video based on the weather
         if(weather_data.weather[0].main === "Rain"){
