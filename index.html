@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source id="background-video" src="Default.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <p id="heading"><b>Welcome to Weather Site</b></p>
+        <div class="container">
+            <form>
+                <input type="text" id="cityName" placeholder="City"/>
+                <button type="button" id="searchButton">Search</button>
+            </form>
+            <div class="weather-fields" style="display: none;">
+                <div class="city-name">
+                    <h2>City: </h2>
+                    <h2 id="city-name-output">--</h2>
+                </div>
+                <div class="city-temp">
+                    <div class="max-temp">
+                        <h3>Temperature</h3>
+                        <h3 id="temp-output">--°C"</h3>
+                    </div>
+                    <div class="min-temp">
+                        <h3>Humidity</h3>
+                        <h3 id="humidity-output">--</h3>
+                    </div>
+                </div>
+                <div class="city-weather">
+                    <h3>Weather: </h3>
+                    <h3 id="weather-output">--</h3>
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
