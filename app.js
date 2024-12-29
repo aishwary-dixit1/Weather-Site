@@ -68,6 +68,8 @@ searchButton.addEventListener("click", async (event) => {
             backgroundVideo.src = "Cloudy.mp4";
         } else if(weather_data.weather[0].main === "Haze"){
             backgroundVideo.src = "Haze.mp4";
+        } else if(weather_data.weather[0].main === "Fog" || weather_data.weather[0].main === "Smoke") {
+            backgroundVideo.src = "Fog.mp4";
         } else {
             backgroundVideo.src = "default.mp4";
         }
